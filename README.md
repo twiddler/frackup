@@ -19,7 +19,7 @@
 1. Archive the plain files
 2. Split the archive into m parts such that n of them together can recover the whole archive
 3. Protect the archive parts against data rot
-4. For i = 0 to m devices, _move_ archive part k_i and its data rot protection files *.tar.[k_i]* to the i-th device
+4. For i = 0 to m devices, _manually move_ archive part k_i and its data rot protection files *.tar.[k_i]* to the i-th device
 
 ## Recombining
 
