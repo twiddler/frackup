@@ -7,7 +7,7 @@ PARTS=$4
 
 # Archive the input
 mkdir $OUT
-tar -c $IN > $OUT/$IN.tar
+tar --create --bzip2 $IN > $OUT/$IN.tar
 
 # Split the archive into m parts such that n of them together can recover the whole archive
 gfsplit -n $THRESHOLD -m $PARTS $OUT/$IN.tar
