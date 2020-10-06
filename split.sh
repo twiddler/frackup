@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PARTS=3
-THRESHOLD=2
 INPUT=$1
+THRESHOLD=$2
+PARTS=$3
 
 # Archive the plain files
 tar -c $INPUT > $INPUT.tar
