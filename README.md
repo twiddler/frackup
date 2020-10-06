@@ -4,9 +4,9 @@
 
 ## Usage
 
-`./split in out n m` archives input directory `in`, splits it into `m` parts, and saves them including recovery files at `out`.
+`./split.sh in out n m` archives input directory `in`, splits it into `m` parts, and saves them including recovery files at `out`.
 
-`./recombine in out` repairs (if necessary) and combines parts from `in` and outputs the result at `out`.
+`./recombine.sh in out` repairs (if necessary) and combines parts from `in` and outputs the result at `out`.
 
 ## CLI programs used
 
