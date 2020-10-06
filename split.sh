@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Create a password file
-openssl rand -base64 32 > password
+# Archive the plain files
+tar -c plain > plain.tar
 
-# Archive and encrypt the plain files
-tar -c plain | gpg --batch --passphrase-file password --symmetric > plain.tar.gpg
+# Split the archive into m parts such that n of them together can recover the whole archive
+gfsplit -n 2 -m 3 plain.tar
 
-# Protect the encrypted archive against data rot
-par2create -r100 -n1 plain.tar.gpg
-
-# Split the password file into m parts such that n of them together can recover the whole key
-gfsplit -n 2 -m 5 password
+# Protect the parts against data rot
+for filename in ./plain.tar.*
+do
+    par2create -r100 -n1 -q "${filename}"
+done
