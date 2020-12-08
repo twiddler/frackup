@@ -1,6 +1,6 @@
 # This helps you with ...
 
-... securely backing up data on m devices such that any n of them can be used together to recover the data.
+... securely backing up data on m devices such that any n of them can be used together to recover the data. No need to remember passwords. No need to trust each individual device or environment.
 
 ## Usage
 
