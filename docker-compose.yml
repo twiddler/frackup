@@ -1,7 +1,7 @@
 version: "3" # optional since v1.27.0
 
 services:
-  test-environment:
+  test:
     build: .
     volumes:
       - .:/code
