@@ -10,4 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: ./scripts/test.sh
+      - run: |
+          chmod +x ./scripts/test.sh"
+          ./scripts/test.sh
