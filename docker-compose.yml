@@ -1,0 +1,8 @@
+version: "3" # optional since v1.27.0
+
+services:
+  test-environment:
+    build: .
+    volumes:
+      - .:/code
+    command: ["/code/tests/bats/bin/bats", "/code/tests/test.bats"]
